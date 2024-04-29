@@ -1,0 +1,16 @@
+cd src && nest g resource users
+
+schema -->folder ---> user.schema.ts
+
+@schema
+@Prop
+
+
+schemaFactory ---> export --->   userModule --> scahme --->
+-------------------------------
+service --->
+//const userSceham = require('./user.schema.ts') 
+
+constructor(@InjectModel(user.name) private userModel :Model<User>)
+
+
