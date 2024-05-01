@@ -1,4 +1,7 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import mongoose from "mongoose";
+import { Role } from "./role.schema";
+
 
 
 @Schema()
@@ -12,6 +15,9 @@ export class User{
 
     @Prop()
     age: number;
+
+    @Prop({type:mongoose.Schema.Types.ObjectId, ref:"Role"})
+    role :Role
 
 
 }
